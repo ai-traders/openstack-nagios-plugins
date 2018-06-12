@@ -43,7 +43,7 @@ class Resource(NagiosResource):
 
     def get_openstack_vars(self,args=None):
 
-       os_vars = dict(username='', password='',tenant_name='',auth_url='', cacert='')
+       os_vars = dict(username='', password='',tenant_name='',auth_url='')
 
        if args.filename:
           config = ConfigParser.RawConfigParser()
@@ -65,6 +65,7 @@ class Resource(NagiosResource):
           except Exception as e:
             self.exit_error('missing environment variable ' + str(e))
 
+       os_vars['cacert'] = None
        os_vars['insecure']=args.insecure
        return os_vars
 
