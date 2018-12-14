@@ -70,15 +70,17 @@ setup(
     # requirements files see:
     # https://packaging.python.org/en/latest/technical.html#install-requires-vs-requirements-files
     install_requires=[
-        'nagiosplugin', 
-        'python-novaclient', 
-        'python-glanceclient',
-        'python-keystoneclient', 
-        'python-neutronclient', 
-        'python-cinderclient',
-        'python-ceilometerclient',
-        'pankoclient',
-        'gnocchiclient',
+        'nagiosplugin==1.2.4', 
+        'python-novaclient==10.3.0', 
+        'python-glanceclient==2.11.1',
+        'python-keystoneclient==3.16.0', 
+        'python-neutronclient==6.9.0', 
+        'python-cinderclient==3.6.0',
+        'python-ceilometerclient==2.9.0',
+        'pankoclient==0.4.0',
+        'gnocchiclient==7.0.1',
+	'oslo.context==2.21.0',
+	'oslo.log==3.38.1'
     ],
 
     # To provide executable scripts, use entry points in preference to the
